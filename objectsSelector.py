@@ -1,11 +1,11 @@
 import bpy
 
-theObject01 = "Cube*"
-theObject02 = "Sphere*"
+theObjects = ["Cube*", "Sphere*"] 
 
 #select objects
 def selectObjects(theObjectName):
-    bpy.ops.object.select_pattern(pattern=theObjectName)
+    for o in theObjectName: 
+        bpy.ops.object.select_pattern(pattern=o)
 
 
-selectObjects(theObject02)
+selectObjects(theObjects)
